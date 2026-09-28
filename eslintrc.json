@@ -1,0 +1,17 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "@prisma/client",
+            "importNames": ["PrismaClient"],
+            "message": "Importez l'instance partagée depuis '@/lib/prisma', ne créez jamais un nouveau PrismaClient."
+          }
+        ]
+      }
+    ]
+  }
+}
